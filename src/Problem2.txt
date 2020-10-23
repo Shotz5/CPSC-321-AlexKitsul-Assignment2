@@ -1,0 +1,3 @@
+The relationship between niceness and priority is that niceness directly adjusts the priority in user space. The relationship is:
+PRIORITY = NICE + 100
+Top runs on a scale from -99 to 20, where -99 to -1 are kernal priorities, and 0-20 are user space priorities.
