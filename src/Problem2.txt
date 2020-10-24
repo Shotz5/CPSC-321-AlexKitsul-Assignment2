@@ -1,4 +1,7 @@
 The relationship between niceness and priority is that niceness directly adjusts the priority in user space. The relationship for user-space is:
-PRIORITY = NICE + 100
-The scale works with priorities 0-99 being kernel priorities, and 100-139 being user-space priorities.
+PRIORITY = NICE + 120
+The scale works with priorities 0-99 being kernel priorities, and 100-139 being user-space priorities, and nice being a scale from -20 to 19.
+
 Top runs on a scale from -99 to 20, where -99 to -20 are kernel priorities, and -19 to 20 are user space priorities.
+
+If the parents priority is changed before the fork(), the child process mimics the parents niceness. If the parents priority changes after the fork()'s have already occured, the child's niceness stays the same as it was when it forked.
